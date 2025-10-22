@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feliz Día del Trabajo Social ❤️</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+
+        header {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            padding: 60px 40px;
+            text-align: center;
+            position: relative;
+        }
+
+        .hearts {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            pointer-events: none;
+        }
+
+        .heart {
+            position: absolute;
+            font-size: 20px;
+            animation: float 6s infinite;
+            opacity: 0.6;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(100vh) rotate(0deg);
+                opacity: 0;
+            }
+            50% {
+                opacity: 0.6;
+            }
+            100% {
+                transform: translateY(-100px) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        h1 {
+            color: white;
+            font-size: 3em;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+            position: relative;
+            z-index: 1;
+        }
+
+        .subtitle {
+            color: white;
+            font-size: 1.5em;
+            font-style: italic;
+            position: relative;
+            z-index: 1;
+        }
+
+        .content {
+            padding: 50px 40px;
+        }
+
+        .intro {
+            text-align: center;
+            font-size: 1.2em;
+            color: #555;
+            margin-bottom: 50px;
+            line-height: 1.8;
+        }
+
+        .photo-section {
+            margin: 40px 0;
+            padding: 30px;
+            background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+            border-radius: 15px;
+            text-align: center;
+        }
+
+        .photo-placeholder {
+            width: 100%;
+            max-width: 500px;
+            height: 400px;
+            margin: 20px auto;
+            background: white;
+            border: 5px solid #fff;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2em;
+            color: #999;
+            background-image: linear-gradient(45deg, #f3f3f3 25%, transparent 25%),
+                              linear-gradient(-45deg, #f3f3f3 25%, transparent 25%),
+                              linear-gradient(45deg, transparent 75%, #f3f3f3 75%),
+                              linear-gradient(-45deg, transparent 75%, #f3f3f3 75%);
+            background-size: 20px 20px;
+            background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+        }
+
+        .photo-caption {
+            margin-top: 15px;
+            font-style: italic;
+            color: #555;
+        }
+
+        .quote-box {
+            background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+            padding: 40px;
+            margin: 40px 0;
+            border-radius: 15px;
+            border-left: 5px solid #f5576c;
+            position: relative;
+        }
+
+        .quote-box::before {
+            content: '"';
+            font-size: 80px;
+            color: rgba(245, 87, 108, 0.3);
+            position: absolute;
+            top: -10px;
+            left: 20px;
+            font-family: Georgia, serif;
+        }
+
+        .quote-text {
+            font-size: 1.3em;
+            color: #333;
+            line-height: 1.8;
+            font-style: italic;
+            margin-left: 20px;
+        }
+
+        .qualities {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 40px 0;
+        }
+
+        .quality-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            transform: translateY(0);
+            transition: transform 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .quality-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .quality-icon {
+            font-size: 3em;
+            margin-bottom: 15px;
+        }
+
+        .quality-title {
+            font-size: 1.3em;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .quality-desc {
+            font-size: 0.95em;
+            opacity: 0.9;
+        }
+
+        .final-message {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 50px 40px;
+            text-align: center;
+            border-radius: 15px;
+            margin: 40px 0;
+        }
+
+        .final-message h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .final-message p {
+            font-size: 1.3em;
+            line-height: 1.8;
+        }
+
+        .signature {
+            text-align: right;
+            font-style: italic;
+            color: #666;
+            margin-top: 40px;
+            font-size: 1.2em;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2em;
+            }
+            
+            .subtitle {
+                font-size: 1.2em;
+            }
+            
+            .content {
+                padding: 30px 20px;
+            }
+            
+            .qualities {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .sparkle {
+            display: inline-block;
+            animation: sparkle 2s infinite;
+        }
+
+        @keyframes sparkle {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.5; transform: scale(1.2); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="hearts">
+                <span class="heart" style="left: 10%; animation-delay: 0s;">❤️</span>
+                <span class="heart" style="left: 30%; animation-delay: 1s;">💙</span>
+                <span class="heart" style="left: 50%; animation-delay: 2s;">💜</span>
+                <span class="heart" style="left: 70%; animation-delay: 3s;">💚</span>
+                <span class="heart" style="left: 90%; animation-delay: 4s;">💛</span>
+            </div>
+            <h1>¡Feliz Día del Trabajo Social! <span class="sparkle">✨</span></h1>
+            <p class="subtitle">Para la trabajadora social más increíble del mundo</p>
+        </header>
+
+        <div class="content">
+            <div class="intro">
+                <p>Hoy celebramos tu vocación, tu entrega y tu corazón inmenso. Eres más que una profesional: eres una luz de esperanza para quienes más lo necesitan. Esta página es un pequeño homenaje a todo lo que haces y a la persona maravillosa que eres.</p>
+            </div>
+
+            <div class="photo-section">
+                <h2 style="color: #f5576c; margin-bottom: 20px; font-size: 2em;">Tu Sonrisa Ilumina Vidas</h2>
+                <div class="photo-placeholder">
+                    📷 Coloca aquí una foto especial de tu hermana
+                </div>
+                <p class="photo-caption">Una sonrisa que transforma el mundo, una persona de corazón</p>
+            </div>
+
+            <div class="quote-box">
+                <p class="quote-text">
+                    El trabajo social no es solo una profesión, es un acto de amor constante. 
+                    Es tender la mano cuando otros la retiran, es creer en las personas cuando 
+                    ellas mismas han dejado de creer, es construir puentes donde solo había muros.
+                </p>
+            </div>
+
+            <h2 style="text-align: center; color: #764ba2; font-size: 2.5em; margin: 50px 0 30px;">
+                Lo Que Te Hace Única 💫
+            </h2>
+
+            <div class="qualities">
+                <div class="quality-card">
+                    <div class="quality-icon">💖</div>
+                    <div class="quality-title">Empatía</div>
+                    <div class="quality-desc">Tu capacidad de ponerte en el lugar de los demás es extraordinaria</div>
+                </div>
+
+                <div class="quality-card">
+                    <div class="quality-icon">💪</div>
+                    <div class="quality-title">Fortaleza</div>
+                    <div class="quality-desc">Enfrentas cada desafío con valentía y determinación</div>
+                </div>
+
+                <div class="quality-card">
+                    <div class="quality-icon">🌟</div>
+                    <div class="quality-title">Dedicación</div>
+                    <div class="quality-desc">Tu compromiso con las personas es inquebrantable</div>
+                </div>
+
+                <div class="quality-card">
+                    <div class="quality-icon">🤗</div>
+                    <div class="quality-title">Amor</div>
+                    <div class="quality-desc">Cada acción tuya está llena de cariño y esperanza</div>
+                </div>
+            </div>
+
+            <div class="photo-section">
+                <h2 style="color: #f5576c; margin-bottom: 20px; font-size: 2em;">Momentos que Inspiran</h2>
+                <div class="photo-placeholder">
+                    📷 Otra foto hermosa de tu hermana en acción
+                </div>
+                <p class="photo-caption">Cada día escribes historias de esperanza y transformación</p>
+            </div>
+
+            <div class="quote-box">
+                <p class="quote-text">
+                    Ser trabajadora social significa levantarse cada día con la firme convicción 
+                    de que es posible hacer la diferencia. Significa ser voz de quien no la tiene, 
+                    refugio en la tormenta y luz en la oscuridad. Tú encarnas todo eso y más.
+                </p>
+            </div>
+
+            <div class="final-message">
+                <h2>Gracias por ser quien eres</h2>
+                <p>
+                    Gracias por elegir un camino que no siempre es fácil, pero que está lleno de propósito. 
+                    Gracias por tu entrega, por tu paciencia, por tu amor incondicional. 
+                    Cada vida que tocas se transforma, cada persona que ayudas lleva contigo un pedacito de esperanza.
+                </p>
+                <p style="margin-top: 20px; font-size: 1.5em;">
+                    Estoy infinitamente orgulloso de ti. Te amo muchísimo. ❤️
+                </p>
+            </div>
+
+            <div class="photo-section">
+                <h2 style="color: #f5576c; margin-bottom: 20px; font-size: 2em;">Siempre en Mi Corazón</h2>
+                <div class="photo-placeholder">
+                    📷 Una última foto especial juntos o de ella
+                </div>
+                <p class="photo-caption">Mi hermanita, quisiera que crezcas tanto que te conviertas en mi inspiración</p>
+            </div>
+
+            <div class="signature">
+                <p>Con todo mi amor,</p>
+                <p style="font-size: 1.5em; margin-top: 10px;">Tu hermanito que te adora 💕</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Crear más corazones animados
+        const hearts = document.querySelector('.hearts');
+        setInterval(() => {
+            const heart = document.createElement('span');
+            heart.className = 'heart';
+            heart.textContent = ['❤️', '💙', '💜', '💚', '💛'][Math.floor(Math.random() * 5)];
+            heart.style.left = Math.random() * 100 + '%';
+            heart.style.animationDuration = (Math.random() * 3 + 4) + 's';
+            hearts.appendChild(heart);
+            
+            setTimeout(() => {
+                heart.remove();
+            }, 7000);
+        }, 1000);
+    </script>
+</body>
+</html>
